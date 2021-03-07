@@ -10,21 +10,25 @@
  */
 
 using namespace std;
+
 void print(int a[], int n)
 {
     cout << "Ordered elements: " << endl;
 
     for (int i = 0; i < n; i++)
+    {
         cout << "[ " << a[i] << " ]";
+    }
 }
 
 void directInsertion(int a[], int n)
 {
-    int i, k, aux;
+    int i;
+    int k;
+    int aux;
 
     for (i = 0; i <= n - 1; i++)
     {
-
         aux = a[i];
         k = i - 1;
         while ((k >= 0) && (aux < a[k]))
@@ -36,12 +40,13 @@ void directInsertion(int a[], int n)
     }
 }
 
-int main()
+int main( void )
 {
     int n;
     cout << "Enter total elements: " << endl;
     cin >> n;
     int num[n];
+    
     for (int i = 0; i < n; i++)
     {
         cout << "Enter the element:  " << (i + 1) << endl;
